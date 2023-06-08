@@ -2,4 +2,4 @@ __pycache__
 flask-env
 .DS_Store
 .env
-.mov
+*.mov
