@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Register Page</h1>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="input-group">
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        <!-- Display the validation errors for username -->
+        {% if form.username.errors %}
+        <div class="error">{{ form.username.errors[0] }}</div>
+        {% endif %}
+        <div class="input-group">
+            {{ form.email.label }}
+            {{ form.email }}
+        </div>
+        <!-- Display the validation errors for email -->
+        {% if form.email.errors %}
+        <div class="error">{{ form.email.errors[0] }}</div>
+        {% endif %}
+        <div class="input-group">
+            {{ form.password.label }}
+            {{ form.password }}
+        </div>
+        {{ form.submit(class_='btn') }}
+    </form>
+
+    <a href="{{ url_for('login') }}" style="color: blue;">Already have an account? Log In</a>
+</body>
+
+</html>
