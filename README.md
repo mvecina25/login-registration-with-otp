@@ -4,7 +4,14 @@ https://github.com/mvecina25/login-registration-with-otp/assets/32367570/452de22
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required dependencies
+1. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required dependencies
+2. Create a new file in the root directory of your project and name it .env.
+3. Add the required environment variables:
+```
+SECRET_KEY=thisisasecretkey
+MAIL_USERNAME=youremail
+MAIL_PASSWORD=yourpassword
+```
 
 ##### Windows:
 ```zsh
